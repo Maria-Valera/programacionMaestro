@@ -1,7 +1,4 @@
-.Contenedor {
-    border: 1px solid blue;
-    border-radius: 15px ;
-}
+
 
 
 .barraMenu {
@@ -15,7 +12,10 @@
     display:flex;
     text-align: center;
 }
-
+.Contenedor {
+    border: 1px solid blue;
+    border-radius: 15px ;
+}
 .imagen{
     padding-top: 20px;
 }
