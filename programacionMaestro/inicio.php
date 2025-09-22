@@ -46,11 +46,11 @@
                 <?php
 
                 include "conexion.php";
-                $sql = $link->query(" SELECT idPersona_NGMS,primerNombre_NGMS,primerApellido_NGMS,fechaNacimiento_NGMS  FROM $tabla ");
+                $sql = $link->query(" SELECT cedula_NGMS,primerNombre_NGMS,primerApellido_NGMS,fechaNacimiento_NGMS  FROM $tabla ");
                 while ($datos = $sql->fetch_object()) { ?>
                     <tr>
 
-                        <td><?= $datos->idPersona_NGMS ?></td>
+                        <td><?= $datos->cedula_NGMS ?></td>
                         <td><?= $datos->primerNombre_NGMS ?></td>
                         <td><?= $datos->primerApellido_NGMS ?></td>
                         <td><?= $datos->fechaNacimiento_NGMS ?></td>

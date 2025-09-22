@@ -8,11 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-
-    include('conexion.php');
-
-    ?>
+    
     
     <main class=" container-fluid p-5">
 
@@ -40,12 +36,6 @@
                                     <i class="bi bi-box-arrow-left ">Volver</i></a>
 
                             </div>
-
-                            <!-- <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
-                                data-bs-target="#formularioUsuario">
-
-                                <i class="bi bi-plus-lg">Registrar</i>
-                            </button>  -->
                         </div>
 
                     </div>
@@ -67,10 +57,13 @@
 
 
 
-                        <div id="estudiante-form">
+                        <form id="estudiante-form" method="POST">
                             <legend class="fs-5">Los campos con <span class="text-danger">(*)</span> son campos
                                 obligatorios a llenar</legend>
-
+                            <?php
+                                include "conexion.php";
+                                include "crear_registro.php";
+                            ?>
                             
 
                             <div class="border border-primary rounded px-1 mt-2">
@@ -118,8 +111,8 @@
                                                 class="text-danger">(*)</span>Sexo</label>
                                         <select class="form-select" id="sexo" name="sexo">
                                             <option value="">Seleccione</option>
-                                            <option value="1">Masculino</option>
-                                            <option value="2">Femenino</option>
+                                            <option value="Masculino">Masculino</option>
+                                            <option value="Femenino">Femenino</option>
 
                                         </select>
 
@@ -183,9 +176,9 @@
                                                 class="text-danger">(*)</span>Lateralidad</label>
                                         <select class="form-select" id="lateralidad-estudiante" name="lateralidad-estudiante">
                                             <option value="">Selección</option>
-                                            <option value="1">Izquierda</option>
-                                            <option value="2">Derecha</option>
-                                            <option value="3">Ambidiestro</option>
+                                            <option value="Izquierda">Izquierda</option>
+                                            <option value="Derecha">Derecha</option>
+                                            <option value="Ambidiestro">Ambidiestro</option>
 
                                         </select>
 
@@ -202,11 +195,11 @@
                                         <select class="form-select" id="orden-nacimiento-estudiante" name="orden-nacimiento-estudiante">
                                             <option value=""></option>
                                             <option value="1">1</option>
-                                            <option value="1">2</option>
-                                            <option value="1">3</option>
-                                            <option value="1">4</option>
-                                            <option value="1">3</option>
-                                            <option value="1">6</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
 
                                         </select>
 
@@ -219,7 +212,7 @@
                                                 class="text-danger">(*)</span>Lugar de
                                             Nacimiento</span>
                                         <input type="text" class="form-control" id="lugar-nacimiento" name="lugar-nacimiento" aria-label="Sizing example input"
-                                            aria-describedby="inputGroup-sizing-default" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios,no se aceptan números"  required>
+                                            aria-describedby="inputGroup-sizing-default" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios,no se aceptan números">
                                     </div>
                                     <small id="lugar-nacimiento-error" class="text-danger "></small>
                                 </div>
@@ -231,11 +224,13 @@
                                     <div class="input-group mb-3" >
                                         <label class="input-group-text" for="inputGroupSelect01"><span
                                                 class="text-danger">(*)</span>Talla Camisa</label>
-                                        <select class="form-select" id="lateralidad-estudiante" name="lateralidad-estudiante">
+                                        <select class="form-select" id="talla_camisa" name="talla_camisa">
                                             <option value="">Selección</option>
-                                            <option value="izquierda">Izquierda</option>
-                                            <option value="derecha">Derecha</option>
-                                            <option value="ambidiestro">Ambidiestro</option>
+                                            <option value="10">10</option>
+                                            <option value="12">12</option>
+                                            <option value="14">14</option>
+                                            <option value="16">16</option>
+                                            <option value="18">18</option>
 
                                         </select>
 
@@ -247,11 +242,25 @@
                                     <div class="input-group mb-3" >
                                         <label class="input-group-text" for="inputGroupSelect01"><span
                                                 class="text-danger">(*)</span>Talla Zapato</label>
-                                        <select class="form-select" id="lateralidad-estudiante" name="lateralidad-estudiante">
+                                        <select class="form-select" id="talla_zapato" name="talla_zapato">
                                             <option value="">Selección</option>
-                                            <option value="izquierda">Izquierda</option>
-                                            <option value="derecha">Derecha</option>
-                                            <option value="ambidiestro">Ambidiestro</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
 
                                         </select>
 
@@ -263,11 +272,13 @@
                                     <div class="input-group mb-3">
                                         <label class="input-group-text" for="inputGroupSelect01"><span
                                                 class="text-danger">(*)</span>Talla PAntalon</label>
-                                        <select class="form-select" id="lateralidad-estudiante" name="lateralidad-estudiante">
+                                        <select class="form-select" id="talla_pantalon" name="talla_pantalon">
                                             <option value="">Selección</option>
-                                            <option value="izquierda">Izquierda</option>
-                                            <option value="derecha">Derecha</option>
-                                            <option value="ambidiestro">Ambidiestro</option>
+                                            <option value="10">10</option>
+                                            <option value="12">12</option>
+                                            <option value="14">14</option>
+                                            <option value="16">16</option>
+                                            <option value="18">18</option>
 
                                         </select>
 
@@ -277,38 +288,30 @@
 
                             </div>
 
+                            
+
                             <div class="row">
-                                <div class="col-3">
-                                    <div class="input-group mb-3" >
-                                        <label class="input-group-text" for="inputGroupSelect01"><span
-                                                class="text-danger">(*)</span>Estatura</label>
-                                        <select class="form-select" id="lateralidad-estudiante" name="lateralidad-estudiante">
-                                            <option value="">Selección</option>
-                                            <option value="izquierda">Izquierda</option>
-                                            <option value="derecha">Derecha</option>
-                                            <option value="ambidiestro">Ambidiestro</option>
 
-                                        </select>
-
-                                    </div>
-                                    <small id="lateralidad-estudiante-error" class="text-danger "></small>
-                                </div>
-
-                                <div class="col-3">
+                            <div class="col-2" >
                                     <div class="input-group mb-3">
-                                        <label class="input-group-text" for="inputGroupSelect01"><span
-                                                class="text-danger">(*)</span>Peso</label>
-                                        <select class="form-select" id="lateralidad-estudiante" name="lateralidad-estudiante">
-                                            <option value="">Selección</option>
-                                            <option value="izquierda">Izquierda</option>
-                                            <option value="derecha">Derecha</option>
-                                            <option value="ambidiestro">Ambidiestro</option>
-
-                                        </select>
-
+                                        <span class="input-group-text" id="inputGroup-sizing-default"><span
+                                                class="text-danger">(*)</span>Estatura</span>
+                                        <input type="number" step="0.01" class="form-control" id="estatura" pattern="[0-9]+" name="estatura" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default" maxlength="8" title="Ingresa solamente numeros,no se permiten letras">
                                     </div>
-                                    <small id="lateralidad-estudiante-error" class="text-danger "></small>
+                                    <small id="cedula-error" class="text-danger "></small>
                                 </div>
+
+                                <div class="col-2" >
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="inputGroup-sizing-default"><span
+                                                class="text-danger">(*)</span>Peso</span>
+                                        <input type="number" step="0.01" class="form-control" id="peso" pattern="[0-9]+" name="peso" aria-label="Sizing example input"
+                                            aria-describedby="inputGroup-sizing-default" maxlength="8" title="Ingresa solamente numeros,no se permiten letras">
+                                    </div>
+                                    <small id="cedula-error" class="text-danger "></small>
+                                </div>
+                                
                             </div>
 
                             </div>
@@ -330,14 +333,14 @@
                                 </div>
 
                                 <div class="p-2">
-                                    <a href="{{route('modules.estudiante.formulario_representante')}}"  class="btn btn-primary me-2 " id="guardar" >Guardar</a>
+                                    <button type="submit"   class="btn btn-primary me-2 " name="registrar" value="Guardar" >Guardar</button>
 
                                 </div>
                             </div>
 
 
 
-                        </div>
+                        </form>
                     </div>
 
 
