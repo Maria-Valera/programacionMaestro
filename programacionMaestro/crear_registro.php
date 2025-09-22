@@ -40,7 +40,7 @@ if(!empty($_POST["registrar"])){
 
 
         if($sql== 1){
-            echo '<div class = "alert alert-success">PERSONA REGISTRADA CORRECTAMENTE YUPIII</div>';
+            echo '<div class = "alert alert-success">ESTUDIANTE REGISTRADA CORRECTAMENTE YUPIII</div>';
 
         }else{
             echo '<div class = "alert alert-danger">ERROR AL REGISTRAR PIPIPI</div>';

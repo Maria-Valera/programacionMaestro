@@ -8,7 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php
+    include "conexion.php";
+include "eliminar_registro.php";
+?>
     
     <main class=" container-fluid p-5">
 
@@ -61,7 +64,7 @@
                             <legend class="fs-5">Los campos con <span class="text-danger">(*)</span> son campos
                                 obligatorios a llenar</legend>
                             <?php
-                                include "conexion.php";
+                                
                                 include "crear_registro.php";
                             ?>
                             
@@ -373,6 +376,8 @@
 
 
     </main>
+
+    
 </body>
 </html>
 

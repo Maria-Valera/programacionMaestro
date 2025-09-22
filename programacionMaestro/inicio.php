@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
 </head>
 
 <body>
@@ -14,7 +15,15 @@
 
 
 
+<script src="aviso_eliminar.js"></script>
+
+
+
     <div class="container p-5  ">
+        <?php 
+include "conexion.php";
+include "eliminar_registro.php"
+?>
 
         <div class="d-flex justify-content-between p-3 mt-3">
 
@@ -45,8 +54,8 @@
             <tbody>
                 <?php
 
-                include "conexion.php";
-                $sql = $link->query(" SELECT cedula_NGMS,primerNombre_NGMS,primerApellido_NGMS,fechaNacimiento_NGMS  FROM $tabla ");
+                
+                $sql = $link->query(" SELECT idPersona_NGMS,cedula_NGMS,primerNombre_NGMS,primerApellido_NGMS,fechaNacimiento_NGMS  FROM $tabla ");
                 while ($datos = $sql->fetch_object()) { ?>
                     <tr>
 
@@ -72,14 +81,14 @@
 
                                 </i>
                             </a>
-
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            <!-- enviamos el id en una variable llamada id que la capturaremos en un "controlador" que es el eliminar -->
+                            <a onclick="return eliminar()" href="inicio.php?id=<?= $datos->idPersona_NGMS ?>"  class="btn btn-danger" data-bs-toggle="modal"
                                 data-bs-target="#modalConfirmacionEliminar">
 
                                 <i class="bi bi-trash3-fill">
                                     Eliminar
                                 </i>
-                            </button>
+                            </a>
 
 
                         </td>
@@ -101,8 +110,12 @@
 
         </table>
 
+        
+
         <hr>
     </div>
+
+    
 </body>
 
 </html>
