@@ -6,11 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<<<<<<< HEAD
     
+=======
+    <link href="Css/style.css" rel="stylesheet">
+>>>>>>> 54e691854b038385b85fd06aeffbf265f771f5d5
 </head>
 
-<body>
 
+<body>
+    <div class="barraMenu">
+        <nav class="navbar  fixed-top navbar-expand-lg bg-primary" style="min-height: 96px;">
+            <div class="container-fluid">
+                <div class="imagen-texto">
+                    <img class="logo-institucion" src="Css/liceoLogo.png" alt="image">
+                    <h1 class="imagen">Estudiante</h1>
+                </div>
+
+                <a class="navbar-brand text-light fs-6" href="#" style="font-size: 1rem;font-weight: bold;">
+                    <span>Liceo Gral Juan Guillermo Iribarren</span>
+                    <br>
+                    <span>Araure | Portuguesa</span>
+                    <br>
+                    <span>Sistema de Incripción</span>
+            
+                </a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
 
 
@@ -20,11 +44,15 @@
 
 
     <div class="container p-5  ">
+<<<<<<< HEAD
         <?php 
 include "conexion.php";
 include "eliminar_registro.php"
 ?>
 
+=======
+    <div class="Contenedor">
+>>>>>>> 54e691854b038385b85fd06aeffbf265f771f5d5
         <div class="d-flex justify-content-between p-3 mt-3">
 
 
@@ -109,10 +137,15 @@ include "eliminar_registro.php"
 
 
         </table>
+<<<<<<< HEAD
 
         
 
+=======
+</div>
+>>>>>>> 54e691854b038385b85fd06aeffbf265f771f5d5
         <hr>
+    
     </div>
 
     

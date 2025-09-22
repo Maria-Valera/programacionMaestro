@@ -17,9 +17,9 @@ CREATE TABLE Persona_NGMS (
     lugarNacimiento_NGMS VARCHAR(255) NOT NULL,
     estatura_NGMS DECIMAL(10,2) NOT NULL,
     peso_NGMS DECIMAL(10,2) NOT NULL,
-    tallaCamisa_NGMS DECIMAL(10,2) NOT NULL,
-    tallaPantalon_NGMS DECIMAL(10,2) NOT NULL, 
-    tallaZapato_NGMS DECIMAL(10,2) NOT NULL
+    tallaCamisa_NGMS INTEGER NOT NULL,
+    tallaPantalon_NGMS INTEGER  NOT NULL, 
+    tallaZapato_NGMS INTEGER  NOT NULL
     
 );
 
