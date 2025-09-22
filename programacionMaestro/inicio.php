@@ -44,15 +44,15 @@
 
 
     <div class="container p-5  ">
-<<<<<<< HEAD
+
         <?php 
 include "conexion.php";
 include "eliminar_registro.php"
 ?>
 
-=======
+
     <div class="Contenedor">
->>>>>>> 54e691854b038385b85fd06aeffbf265f771f5d5
+
         <div class="d-flex justify-content-between p-3 mt-3">
 
 
@@ -137,13 +137,9 @@ include "eliminar_registro.php"
 
 
         </table>
-<<<<<<< HEAD
 
-        
-
-=======
 </div>
->>>>>>> 54e691854b038385b85fd06aeffbf265f771f5d5
+
         <hr>
     
     </div>

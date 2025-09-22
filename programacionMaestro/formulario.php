@@ -9,12 +9,12 @@
     <title>Document</title>
 </head>
 <body>
-<<<<<<< HEAD
+
     <?php
     include "conexion.php";
 include "eliminar_registro.php";
 ?>
-=======
+
     <div class="barraMenu">
         <nav class="navbar  fixed-top navbar-expand-lg bg-primary" style="min-height: 96px;">
             <div class="container-fluid">
@@ -35,7 +35,7 @@ include "eliminar_registro.php";
             </div>
         </nav>
     </div>
->>>>>>> 54e691854b038385b85fd06aeffbf265f771f5d5
+
     
     <main class=" container-fluid p-5">
 
