@@ -83,7 +83,7 @@ include "eliminar_registro.php"
                 <?php
 
                 
-                $sql = $link->query(" SELECT idPersona_NGMS,cedula_NGMS,primerNombre_NGMS,primerApellido_NGMS,fechaNacimiento_NGMS  FROM $tabla ");
+                $sql = $link->query(" SELECT idPersona_NGMS,cedula_NGMS,primerNombre_NGMS,segundoNombre_NGMS,primerApellido_NGMS,fechaNacimiento_NGMS  FROM $tabla ");
                 while ($datos = $sql->fetch_object()) { ?>
                     <tr>
 
