@@ -21,9 +21,13 @@ if(!empty($_POST["registrar"])){
     elseif(CamposNumericos($_POST["cedula"])  || CamposNumericos($_POST["estatura"]) || CamposNumericos($_POST["peso"])){
         echo '<div class = "alert alert-warning">Los campos tipo numerico no pueden tener ningun  caracter</div>';
     }
-   /* elseif(!Edad($_POST["fechaNacimiento"])){
+    elseif(Edad($_POST["fechaNacimiento"])){
         echo '<div class = "alert alert-warning">La persona a registrar sale del rango de edad</div>';
-    }*/
+    }
+    elseif(TamañoCedula($_POST["cedula"])){
+        echo '<div class = "alert alert-warning">El campo cedula debe tener un max de 8 caracteres y un min 8 caracteres tambien</div>';
+    }
+
     else {
         $documento = $_POST["tipo-ci"];
         $cedula = $_POST["cedula"];
