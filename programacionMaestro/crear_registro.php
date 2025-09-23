@@ -34,8 +34,8 @@ if(!empty($_POST["registrar"])){
         $fechaNac = $_POST["fechaNacimiento"];
         $sexo = $_POST["sexo"];
         $pNombre = $_POST["primer-nombre"];
-        $sNombre = $_POST["primer-apellido"];
-        $pApellido = $_POST["segundo-nombre"];
+        $sNombre = $_POST["segundo-nombre"];
+        $pApellido = $_POST["primer-apellido"];
         $sApellido = $_POST["segundo-apellido"];
         $lateralidad = $_POST["lateralidad-estudiante"];
         $ordenNac = $_POST["orden-nacimiento-estudiante"];
